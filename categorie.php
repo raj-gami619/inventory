@@ -15,7 +15,7 @@
       $sql  = "INSERT INTO categories (name)";
       $sql .= " VALUES ('{$cat_name}')";
       if($db->query($sql)){
-        $session->msg("s", "Successfully Added Categorie");
+        $session->msg("s", "Successfully Added Category");
         redirect('categorie.php',false);
       } else {
         $session->msg("d", "Sorry Failed to insert.");
@@ -40,15 +40,15 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Add New Categorie</span>
+            <span>Add New Category</span>
          </strong>
         </div>
         <div class="panel-body">
           <form method="post" action="categorie.php">
             <div class="form-group">
-                <input type="text" class="form-control" name="categorie-name" placeholder="Categorie Name">
+                <input type="text" class="form-control" name="categorie-name" placeholder="Category Name">
             </div>
-            <button type="submit" name="add_cat" class="btn btn-primary">Add categorie</button>
+            <button type="submit" name="add_cat" class="btn btn-primary">Add category</button>
         </form>
         </div>
       </div>
@@ -66,7 +66,7 @@
             <thead>
                 <tr>
                     <th class="text-center" style="width: 50px;">#</th>
-                    <th>Categories</th>
+                    <th>Category</th>
                     <th class="text-center" style="width: 100px;">Actions</th>
                 </tr>
             </thead>
